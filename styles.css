@@ -1,6 +1,21 @@
 canvas {
   border: 1px solid black;
 }
+
+#canvas2 {
+  border: 1px solid black;
+  /* background-color: #d0e0f6; */
+}
+
+#part1 {
+  width: 50%;
+  float: left;
+}
+
+#part2 {
+  float: left;
+}
+
 .slider {
   -webkit-appearance: none;
   width: 40%;
