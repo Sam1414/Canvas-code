@@ -127,7 +127,7 @@ function at_exp(nx) {
     c2.moveTo(0, canvas2.height / 2);
     if (nx < canvas2.width - 249) {
         for (let x = -249; x < nx; x += 1) {
-            c2.lineTo(x + 249, y - Math.exp(x / 100 + 3.8));
+            c2.lineTo(x + 249, y - Math.exp(x / 100 + 4.5));
         }
         c2.strokeStyle = 'rgb(0, 255, 0)';
         c2.stroke();

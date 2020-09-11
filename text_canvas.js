@@ -67,12 +67,26 @@ var interval = setInterval(() => {
                 cell2.innerHTML = "1x11 double";
                 break;
             case 7:
+                line = document.getElementById("line" + i);
+                line.innerHTML = "<span class='highlight'>" + line.textContent + "</span>";
                 var x = 0;
                 var i1 = setInterval(() => { at_exp(x); x++; }, 2);
                 setTimeout(() => { clearInterval(i1); }, 4500);
                 break;
+            case 8:
+                line = document.getElementById("line" + i);
+                line.innerHTML = "<span class='highlight'>" + line.textContent + "</span>";
+                break;
+            case 9:
+                line = document.getElementById("line" + i);
+                line.innerHTML = "<span class='highlight'>" + line.textContent + "</span>";
+                break;
+            case 10:
+                line = document.getElementById("line" + i);
+                line.innerHTML = "<span class='highlight'>" + line.textContent + "</span>";
+                break;
         }
     }
     i++;
-}, 1000);
+}, 500);
 setTimeout(() => { clearInterval(interval); }, 10000);
