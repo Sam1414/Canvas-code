@@ -3,8 +3,11 @@ canvas {
 }
 
 #canvas2 {
-  border: 1px solid black;
-  /* background-color: #d0e0f6; */
+  background-color: #d0e0f6;
+}
+
+#text_canvas {
+  background-color: rgb(247, 222, 226);
 }
 
 #part1 {
@@ -13,7 +16,22 @@ canvas {
 }
 
 #part2 {
+  width: 50%;
   float: left;
+}
+
+#exponential_code {
+  width: 50%;
+  float: left;
+}
+
+#workS {
+  width: 50%;
+  float: left;
+}
+
+.highlight {
+  background-color: lightsalmon;
 }
 
 .slider {

@@ -190,7 +190,6 @@ function at_ramp(nx) {
 
 function animate_together() {
     var x = 0;
-    // c2.clearRect(0, 0, canvas.width, canvas.height);
     var i1 = setInterval(() => { at_exp(x); x++; }, 10);
     setTimeout(() => { clearInterval(i1); }, 4500);
     var i2 = setInterval(() => { at_imp(x); x++; }, 10);
@@ -210,4 +209,4 @@ draw_axes();
 // draw_ramp();
 // draw_exponential();
 // animate_exponential();
-animate_together();
+// animate_together();

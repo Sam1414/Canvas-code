@@ -6,11 +6,13 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   </head>
-  <body style="margin:8px">
+  <body style="margin:8px;">
     <h1 align="center">Below are the canvases</h1>
     <div id="part1">
-      <h2>Sin, Cos, Rectangular & Triangular</h2>
-      <canvas id="canvas" width="500" height="300"></canvas>
+      <div>
+        <h2>Sin, Cos, Rectangular & Triangular</h2>
+        <canvas id="canvas" width="500" height="300"></canvas>
+      </div>
       <div class="slidecontainer">
           <input type="range" min="-150" max="150" value="80" class="slider" id="Amplitude">
           <p>Amplitude: <span id="amp"></span></p>
@@ -24,10 +26,37 @@
       </div>
     </div>
     <div id="part2">
-      <h2>Unit Impulse, Step, Exponential</h2>
-      <canvas id="canvas2" width="400" height="400"></canvas>
+      <div>
+        <h2>Unit Impulse, Step, Exponential</h2>
+        <canvas id="canvas2" width="400" height="400"></canvas>
+      </div>
+      <div id="workText">
+        <div id="exponential_code">
+          <h2>Text Paragraph</h2>
+          <p id="line1">#Exponential Signal</p>
+          <p id="line2">n1=-5</p>
+          <p id="line3">n2=5</p>
+          <p id="line4">t=n1 : n2;</p>
+          <p id="line5">a=10;</p>
+          <p id="line6">y=exp(a*t);</p>
+          <p id="line7">plot(t,y,'r');</p>
+          <p id="line8">title('exponential Function');</p>
+          <p id="line9">xlabel('time');</p>
+          <p id="line10">ylabel('amplitude');</p>
+        </div>
+        <div id="workS">
+          <h2>Workspace</h2>
+          <table class="table table-bordered">
+            <thead>
+              <th>Name</th>
+              <th>Value</th>
+            </thead>
+          </table>
+        </div>
+      </div>
     </div>
   </body>
+  <script src="text_canvas.js"></script>
   <script src="canvas2.js"></script>
   <script src="canvas.js"></script>
 </html>
