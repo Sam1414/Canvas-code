@@ -1,62 +1,65 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Canvas Drawing</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  </head>
-  <body style="margin:8px;">
-    <h1 align="center">Below are the canvases</h1>
-    <div id="part1">
-      <div>
-        <h2>Sin, Cos, Rectangular & Triangular</h2>
-        <canvas id="canvas" width="500" height="300"></canvas>
+
+<head>
+  <meta charset="utf-8">
+  <title>Canvas Drawing</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body style="margin:8px;">
+  <h1 align="center">Below are the canvases</h1>
+  <div id="part1">
+    <div>
+      <h2>Sin, Cos, Rectangular & Triangular</h2>
+      <canvas id="canvas" width="500" height="300"></canvas>
+    </div>
+    <div class="slidecontainer">
+      <input type="range" min="-150" max="150" value="80" class="slider" id="Amplitude">
+      <p>Amplitude: <span id="amp"></span></p>
+      <input type="range" min="50" max="400" value="170" step="1" class="slider" id="Wavelength">
+      <p>Wavelength: <span id="wl"></span></p>
+      <input type="range" min="-1.0" max="1.0" value="0.1" step="0.1" class="slider" id="Frequency">
+      <p>Frequency: <span id="freq"></span></p>
+      <input type="range" min="-5" max="5" value="0" step="0.5" class="slider" id="Phase">
+      <p>Phase(π): <span id="phi"></span></p>
+      <script src="sliders.js"></script>
+    </div>
+  </div>
+  <div id="part2">
+    <div>
+      <h2>Impulse, Step, Ramp, Exponential</h2>
+      <canvas id="canvas2" width="300" height="300"></canvas>
+    </div>
+    <div id="workText">
+      <div id="exponential_code">
+        <h2>Text Paragraph</h2>
+        <p id="line1">#Exponential Signal</p>
+        <p id="line2">n1=-5</p>
+        <p id="line3">n2=5</p>
+        <p id="line4">t=n1 : n2;</p>
+        <p id="line5">a=10;</p>
+        <p id="line6">y=exp(a*t);</p>
+        <p id="line7">plot(t,y,'r');</p>
+        <p id="line8">title('exponential Function');</p>
+        <p id="line9">xlabel('time');</p>
+        <p id="line10">ylabel('amplitude');</p>
       </div>
-      <div class="slidecontainer">
-          <input type="range" min="-150" max="150" value="80" class="slider" id="Amplitude">
-          <p>Amplitude: <span id="amp"></span></p>
-          <input type="range" min="50" max="400" value="170" step="1" class="slider" id="Wavelength">
-          <p>Wavelength: <span id="wl"></span></p>
-          <input type="range" min="-1.0" max="1.0" value="0.1" step="0.1" class="slider" id="Frequency">
-          <p>Frequency: <span id="freq"></span></p>
-          <input type="range" min="-5" max="5" value="0" step="0.5" class="slider" id="Phase">
-          <p>Phase(π): <span id="phi"></span></p>
-          <script src="sliders.js"></script>
+      <div id="workS">
+        <h2>Workspace</h2>
+        <table class="table table-bordered">
+          <thead>
+            <th>Name</th>
+            <th>Value</th>
+          </thead>
+        </table>
       </div>
     </div>
-    <div id="part2">
-      <div>
-        <h2>Unit Impulse, Step, Exponential</h2>
-        <canvas id="canvas2" width="300" height="300"></canvas>
-      </div>
-      <div id="workText">
-        <div id="exponential_code">
-          <h2>Text Paragraph</h2>
-          <p id="line1">#Exponential Signal</p>
-          <p id="line2">n1=-5</p>
-          <p id="line3">n2=5</p>
-          <p id="line4">t=n1 : n2;</p>
-          <p id="line5">a=10;</p>
-          <p id="line6">y=exp(a*t);</p>
-          <p id="line7">plot(t,y,'r');</p>
-          <p id="line8">title('exponential Function');</p>
-          <p id="line9">xlabel('time');</p>
-          <p id="line10">ylabel('amplitude');</p>
-        </div>
-        <div id="workS">
-          <h2>Workspace</h2>
-          <table class="table table-bordered">
-            <thead>
-              <th>Name</th>
-              <th>Value</th>
-            </thead>
-          </table>
-        </div>
-      </div>
-      <script src="text_canvas.js"></script>
-    </div>
-  </body>
-  <script src="canvas2.js"></script>
-  <script src="canvas.js"></script>
+    <script src="text_canvas.js"></script>
+  </div>
+</body>
+<script src="canvas2.js"></script>
+<script src="canvas.js"></script>
+
 </html>
