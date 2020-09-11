@@ -6,11 +6,11 @@ var line, prev_line;
 var i = 1;
 var interval = setInterval(() => {
     console.log("line", i);
-    if (i > 1) {
-        prev_line = document.getElementById("line" + (i - 1));
-        prev_line.innerHTML = "<p>" + prev_line.textContent + "</p>";
-    }
-    if (i <= 10) {
+    if (i <= 11) {
+        if (i > 1) {
+            prev_line = document.getElementById("line" + (i - 1));
+            prev_line.innerHTML = "<p>" + prev_line.textContent + "</p>";
+        }
         switch (i) {
             case 1:
                 line = document.getElementById("line" + i);
@@ -89,4 +89,4 @@ var interval = setInterval(() => {
     }
     i++;
 }, 500);
-setTimeout(() => { clearInterval(interval); }, 10000);
+setTimeout(() => { clearInterval(interval); }, 6000);
