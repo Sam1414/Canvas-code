@@ -70,7 +70,7 @@ var interval = setInterval(() => {
                 line = document.getElementById("line" + i);
                 line.innerHTML = "<span class='highlight'>" + line.textContent + "</span>";
                 var x = 0;
-                var i1 = setInterval(() => { at_exp(x); x++; }, 2);
+                var i1 = setInterval(() => { at_exp(x); x++; }, 0.5);
                 setTimeout(() => { clearInterval(i1); }, 4500);
                 break;
             case 8:
